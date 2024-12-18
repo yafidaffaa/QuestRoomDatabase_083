@@ -9,9 +9,8 @@ class KrsApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        //memmbuat instance ContainerApp
+
         containerApp = ContainerApp(this)
-        //instance adalah object yang dibuat dari class
     }
 
 }
