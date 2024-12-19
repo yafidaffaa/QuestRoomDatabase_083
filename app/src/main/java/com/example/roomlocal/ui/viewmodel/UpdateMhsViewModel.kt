@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.roomlocal.data.entity.Mahasiswa
 import com.example.roomlocal.repository.RepositoryMhs
+import com.example.roomlocal.ui.navigation.DestinasiUpdate
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
