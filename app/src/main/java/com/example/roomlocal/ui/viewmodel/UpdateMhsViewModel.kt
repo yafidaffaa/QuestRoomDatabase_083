@@ -74,7 +74,9 @@ class UpdateMhsViewModel(
         }
     }
 
-
+    fun resetSnackBarMessage(){
+        updateUIState = updateUIState.copy(snackBarMessage = null)
+    }
 }
 
 fun Mahasiswa.toUIStateMhs():MhsUIState = MhsUIState(
