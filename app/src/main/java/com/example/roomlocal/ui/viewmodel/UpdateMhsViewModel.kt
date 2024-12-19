@@ -1,6 +1,8 @@
 package com.example.roomlocal.ui.viewmodel
 
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -44,7 +46,7 @@ class UpdateMhsViewModel(
             kelas = if (event.kelas.isNotEmpty()) null else "Kelas Kelamin tidak boleh kosong",
             angkatan = if (event.angkatan.isNotEmpty()) null else "Angkatan Kelamin tidak boleh kosong",
         )
-        updateUIState = updateUIState.copy(isEntryVallid = errorState)
+        updateUIState = updateUIState.copy(isEntryValid = errorState)
         return errorState.isValid()
     }
 
@@ -56,26 +58,26 @@ class UpdateMhsViewModel(
                 try{
                     repositoryMhs.updateMhs(currentEvent.toMahasiswaEntity())
                     updateUIState = updateUIState.copy(
-                        snackBarMessage = "Data berhasil diupdate",
+                        snackbarMessage = "Data berhasil diupdate",
                         mahasiswaEvent = MahasiswaEvent(),
-                        isEntryVallid = FormErrorState()
+                        isEntryValid = FormErrorState()
                     )
-                    println("snackBarMessage diatur: ${updateUIState.snackBarMessage}")
+                    println("snackBarMessage diatur: ${updateUIState.snackbarMessage}")
                 }catch (e: Exception){
                     updateUIState = updateUIState.copy(
-                        snackBarMessage = "Data gagal diupdate"
+                        snackbarMessage = "Data gagal diupdate"
                     )
                 }
             }
         } else{
             updateUIState = updateUIState.copy(
-                snackBarMessage = "Data gagal diupdate"
+                snackbarMessage = "Data gagal diupdate"
             )
         }
     }
 
     fun resetSnackBarMessage(){
-        updateUIState = updateUIState.copy(snackBarMessage = null)
+        updateUIState = updateUIState.copy(snackbarMessage = null)
     }
 }
 
