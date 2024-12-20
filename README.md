@@ -1,0 +1,5 @@
+![add view](https://github.com/user-attachments/assets/beb33e3b-c432-43d7-bd24-5a0e29e1eded)
+![detail view](https://github.com/user-attachments/assets/bf5f0cd9-9e7c-4c6b-8794-8404464ae70a)
+![edit view](https://github.com/user-attachments/assets/42dda315-63bd-498f-852c-889f3e3bbb98)
+![confirm view](https://github.com/user-attachments/assets/cda64d91-7da9-47ab-9fda-3a0a7c27f86f)
+![home view](https://github.com/user-attachments/assets/a045b358-2210-4ebc-ae23-81a6aedcde8d)
